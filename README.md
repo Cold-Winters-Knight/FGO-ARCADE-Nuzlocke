@@ -58,8 +58,8 @@ The format is:
 
 The quoted number on the left is the **trading-card ID**.  
 The integer on the right is the card's **relative summon weight**.
-The current total weight for each banner is 1,000,000.
-
+The current total weight for each story banner is 1,000,000.
+The mystery box is set to 1 weight for everything in it.
 
 ## Recommended campaign workflow
 
