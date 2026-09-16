@@ -4,7 +4,7 @@ A spoiler-safe set of custom summon-weight presets for a **Fate/Grand Order Arca
 
 The goal is not to recreate the original retail banners. These presets turn the Arcade story into a run where your roster develops through limited pulls, story/era-focused banners, a Mystery Box for otherwise awkward-to-place Servants, and a separate Nuzlocke ruleset built around permadeath, NP investment, Command Spells, and Digivolution.
 
-For the actual challenge rules, see **[NUZLOCKE_RULES.md](NUZLOCKE_RULESET_README.md)**.
+For the actual challenge rules, see **[NUZLOCKE_RULESET_README.md](NUZLOCKE_RULESET_README.md)**.
 
 > **Spoiler note:** The normal banner JSON files contain trading-card IDs and integer weights rather than Servant names. Opening or editing any separately labeled/commented reference copies may reveal banner contents.
 
