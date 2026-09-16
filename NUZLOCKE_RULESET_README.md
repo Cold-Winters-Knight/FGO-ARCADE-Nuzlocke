@@ -26,7 +26,7 @@ The intent is for each chapter to have a recognizable locality to the story prog
 
 The current custom banners use approximately **18% Servants / 82% Craft Essences**, averaging about **9 Servants per 50 pulls**.
 
-Seasonal, event-themed, gag, and other eligible alternate forms are generally kept out of the normal story pools so they can be handled through **Digivolution**.
+Seasonal, event-themed, gag, and other eligible alternate forms are generally kept out of the normal story pools so they can be handled through **Digivolution** (Explained later).
 
 ## Starter Servant
 
@@ -56,7 +56,9 @@ A dead Mystery Servant still counts as previously obtained. Death does not turn 
 
 Mystery Box Servants cannot gain NP levels through additional Mystery Box summons.
 
-That is what **NP Tokens** are for.
+That is what **NP Tokens** are for (Explained later).
+
+The Mystery Box combined with a starter and Mash are your guaranteed anti-softlock 3 man team.
 
 ## NP Tokens
 
@@ -231,3 +233,5 @@ The intended answer should not always be "reroll until you have the meta unit" o
 The randomness is part of the story.
 
 Sometimes you get an all-star. Sometimes some Servant you barely cared about becomes the only survivor who has been with you for four Singularities, and suddenly you would burn one of your three reality-warping Command Spells before letting them die.
+
+Unfortunately I have yet to figure out how to implement account pull memory without you having to relaunch the game from Scooby after manually adding the cards you drew. Pencil and Paper for everyone yay!
