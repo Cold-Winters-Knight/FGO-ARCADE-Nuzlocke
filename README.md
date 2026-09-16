@@ -1,65 +1,18 @@
-# FGO Arcade Nuzlocke Ruleset and Gacha Banner Presets
+# FGO Arcade Nuzlocke Banner Presets
 
-A spoiler-safe set of custom summon-weight presets for a **Fate/Grand Order Arcade Nuzlocke-style campaign**.
+Custom summon presets and house rules for a **Fate/Grand Order Arcade Nuzlocke-style campaign**.
 
-The goal is not to recreate the original retail banners. These presets turn the Arcade story into a run where your roster develops through limited pulls, story/era-focused banners, a Mystery Box for otherwise awkward-to-place Servants, and a separate Nuzlocke ruleset built around permadeath, NP investment, Command Spells, and Digivolution.
+For the challenge rules, see **[NUZLOCKE_RULES.md](NUZLOCKE_RULES.md)**.
 
-For the actual challenge rules, see **[NUZLOCKE_RULESET.md](NUZLOCKE_RULESET.md)**.
+## Installation — Scooby 1.1.2+
 
-> **Spoiler note:** The normal banner JSON files contain trading-card IDs and integer weights rather than Servant names. Opening or editing any separately labeled/commented reference copies may reveal banner contents.
-
-## What is included
-
-```text
-FGOA_Nuzlocke_Banners/
-├─ Story_Banners/
-│  ├─ 00_Fuyuki.json
-│  ├─ 01_Orleans.json
-│  ├─ 02_Septem.json
-│  ├─ 03_Okeanos.json
-│  ├─ 04_London.json
-│  ├─ 05_E_Pluribus_Unum.json
-│  ├─ 06_Lost_Jerusalem.json
-│  ├─ 07_Babylon.json
-│  └─ 08_Lilim_Harlot.json
-├─ MYSTERY_BOX.json
-├─ README.md
-└─ NUZLOCKE_RULES.md
-```
-
-## Requirements
-
-These are **configuration presets only**. They do not contain the game, server, or card data.
-
-They are intended for a working local FGO Arcade installation using Cloud23333/Artemis and **Scooby 1.1.2 or newer**, which supports named Draw Rate presets.
-
-The presets use the same version-1 `tc_id -> integer weight` format as the active Artemis summon-weight configuration:
-
-```json
-{
-  "version": 1,
-  "weights": {
-    "6": 100,
-    "198": 50
-  }
-}
-```
-
-The numbers are **relative weights**. A card with weight `100` is twice as likely as a card with weight `50` within the same active table.
-
-The total weight of each banner starts at 1,000,000.
-
-## Installing the banners with Scooby 1.1.2+
-
-Scooby 1.1.2 added native **Draw Rate presets**, so manually replacing `fgo_summon_weights.json` is no longer necessary for normal use.
-
-Copy the supplied banner JSON files into:
+Copy **all ten raw `.json` preset files** from this folder directly into:
 
 ```text
 Server\artemis\config\summon-presets\
 ```
 
-For example:
+After copying, that folder should contain:
 
 ```text
 Server\artemis\config\summon-presets\
@@ -75,66 +28,58 @@ Server\artemis\config\summon-presets\
 └─ MYSTERY_BOX.json
 ```
 
-Then:
+Then open Scooby's **Draw Rates** page and load whichever preset you want to use.
 
-1. Open the **Scooby launcher**.
-2. Open the **Draw Rates** table.
-3. Choose the preset for the banner you want to use.
-4. Load/apply that preset.
-5. Summon normally in-game.
-6. When you need a different Singularity banner or the Mystery Box, load the corresponding preset.
+No renaming and no manual replacement of `fgo_summon_weights.json` is required when using Scooby 1.1.2+.
 
-No renaming is required when using Scooby's preset system.
+## Important: these are strict JSON files
 
-### Recommended Nuzlocke workflow
+The preset files intentionally contain **only valid JSON**.
 
-At the start of a Singularity:
+Do not add inline comments such as:
+
+```text
+// Artoria Pendragon
+```
+
+Scooby's preset loader rejects `//` comments.
+
+The format is:
+
+```json
+{
+  "version": 1,
+  "weights": {
+    "6": 34286,
+    "198": 1000
+  }
+}
+```
+
+The quoted number on the left is the **trading-card ID**.  
+The integer on the right is the card's **relative summon weight**.
+The current total weight for each banner is 1,000,000.
+
+
+## Recommended campaign workflow
+
+At the start of each Singularity:
 
 1. Load `MYSTERY_BOX.json`.
-2. Make the single Mystery Box summon allowed by the rules.
+2. Use the one Mystery Box summon granted by the rules.
 3. Load the current Singularity banner, or any previously unlocked Singularity banner.
-4. Spend or save your normal pull allowance as described in `NUZLOCKE_RULES.md`.
+4. Spend or save your normal pull allowance according to `NUZLOCKE_RULES.md`.
 
-Because each player runs their own local server/account, different players can use different presets and progression independently.
+## Banner rates
 
-## Legacy manual method
-
-If you are using an older Scooby build without Draw Rate presets, the banners still use the same underlying Artemis format.
-
-Back up:
-
-```text
-Server\artemis\config\fgo_summon_weights.json
-```
-
-Then copy the banner you want into:
-
-```text
-Server\artemis\config\
-```
-
-and rename the copied file to:
-
-```text
-fgo_summon_weights.json
-```
-
-Do **not** replace or edit `summon_candidates.json` to use these presets.
-
-Updating to Scooby 1.1.2+ is recommended because named Draw Rate presets remove the need for this manual hot-swap process.
-
-## Story Banner design
-
-Each Story Banner uses the same overall probability budget:
+Each Story Banner uses:
 
 | Result | Probability |
 |---|---:|
 | Servant | 18% |
 | Craft Essence | 82% |
 
-This averages roughly **9 Servants per 50 pulls**.
-
-### Servant rarity budget
+Servant rarity budget:
 
 | Rarity | Probability |
 |---|---:|
@@ -144,13 +89,9 @@ This averages roughly **9 Servants per 50 pulls**.
 | 2★ | 3% |
 | 1★ | 2% |
 
-Within a rarity bucket, story-relevant Servants receive **6x the individual weight** of secondary era/returning Servants.
+Within a rarity bucket, story-relevant Servants receive **6× the individual weight** of secondary era/returning Servants.
 
-The intent is to let players headhunt characters connected to the current story beat without turning every later banner into one permanently expanding pool.
-
-### Craft Essences
-
-Every Story Banner uses the same curated set of **100 normal, non-Fatal CEs**:
+Every Story Banner uses the same curated set of **100 normal, non-Fatal Craft Essences**:
 
 | Rarity | CE count | Probability budget |
 |---|---:|---:|
@@ -158,11 +99,7 @@ Every Story Banner uses the same curated set of **100 normal, non-Fatal CEs**:
 | 4★ | 40 | 25% |
 | 3★ | 25 | 45% |
 
-Prize/commemorative clutter and CEs that are not useful for normal gameplay were heavily reduced so that the CE side of the banner still functions as equipment progression rather than filler.
-
 ## Story Banner pool sizes
-
-These counts are intentionally spoiler-safe.
 
 | Banner | 5★ | 4★ | 3★ | 2★ | 1★ | Total Servants |
 |---|---:|---:|---:|---:|---:|---:|
@@ -176,13 +113,11 @@ These counts are intentionally spoiler-safe.
 | Babylon | 17 | 2 | 2 | 1 | 1 | 23 |
 | Lilim Harlot | 15 | 3 | 2 | 1 | 1 | 22 |
 
-Pool size is **not** the same thing as rarity rate. The probability budgets above remain fixed even when a later banner contains more high-rarity Servants.
+Pool size does not change the fixed rarity-rate budgets above.
 
 ## Mystery Box
 
-`MYSTERY_BOX.json` is a special **Servants-only** pool for otherwise-unassigned characters that do not have a clean home in the story/era banners.
-
-Current spoiler-safe composition:
+`MYSTERY_BOX.json` is Servants-only.
 
 | Rarity | Servants |
 |---|---:|
@@ -193,54 +128,10 @@ Current spoiler-safe composition:
 | 1★ | 1 |
 | **Total** | **22** |
 
-Every eligible Mystery Box Servant has equal weight in the JSON.
+Every eligible Mystery Box Servant has equal weight.
 
-The **duplicate-proof rule is a house rule, not something the JSON can enforce**. If a player rolls a Mystery Servant they have previously received from the Mystery Box, discard that result and reroll.
-
-See `NUZLOCKE_RULES.md` for Mystery Box progression, NP Tokens, and Digivolution.
-
-## What the JSON files do not enforce
-
-The banner files control only what can be drawn and the relative summon weights. They do **not** track or enforce:
-
-- the 50-pull allowance;
-- saved pulls;
-- one Mystery Box pull per Singularity;
-- duplicate protection for Mystery Box pulls;
-- starter Servants;
-- permadeath;
-- NP Tokens;
-- Command Spells;
-- Digivolution;
-- player-specific progression.
-
-Those are challenge rules and must be tracked by the player.
-
-Fixed story/first-clear reward cards are not inserted into these custom summon pools.
-
-## Editing your own presets
-
-Scooby's exported Draw Rate presets use the same structure as these files, so you can duplicate one of the supplied JSONs and edit its `weights` table to make your own banner.
-
-Example:
-
-```json
-{
-  "version": 1,
-  "weights": {
-    "6": 100,
-    "198": 100,
-    "236": 25
-  }
-}
-```
-
-In that example, cards `6` and `198` have equal probability, while card `236` has one quarter of their individual weight.
-
-Only valid summonable trading-card IDs should be used. A missing card ID effectively has zero weight in an explicit preset.
+Duplicate protection, pull limits, permadeath, NP Tokens, Command Spells, and Digivolution are house rules and are not enforced by the JSON files.
 
 ## Important
 
-These are **custom campaign probabilities**, not original FGO Arcade retail rates or reconstructed official banners.
-
-The banner set is intended to create a particular challenge-run experience: limited resources, locally relevant story pools, meaningful duplicates, and enough randomness that two runs can develop very different rosters.
+These are **custom campaign probabilities**, not reconstructed retail FGO Arcade banners.
