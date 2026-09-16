@@ -98,6 +98,30 @@ The pull is consumed. The Servant does not return.
 
 This is intentionally harsh. Losing a developed NP3+ Servant should change the shape of the run rather than merely costing upgrade materials.
 
+## Support Servants / Fail State
+
+### Soft-lock concerns
+
+From the beginning of the run, your roster is guaranteed to contain at least three owned Servants:
+
+- **Mash**
+- **your chosen Starter Servant**
+- **your first Mystery Box Servant**
+
+Because of that, even pulling **0 Servants in all 50 normal pulls** cannot soft-lock you out of starting with a three-person team.
+
+### Support Servants are illegal
+
+**Support Servants may not be used.**
+
+The game's support system exists to fill roster gaps, but those Servants are not part of your Nuzlocke roster and do not count as owned Servants for the purposes of the run.
+
+### Run failure
+
+If you **end a mission with no surviving Servants that you own**, the run is over.
+
+This is the campaign fail state.
+
 ## Command Spells
 
 Players get **3 (THREE) Command Spells for the entire run**.
