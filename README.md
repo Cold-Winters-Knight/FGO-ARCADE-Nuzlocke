@@ -47,6 +47,8 @@ The presets use the same version-1 `tc_id -> integer weight` format as the activ
 
 The numbers are **relative weights**. A card with weight `100` is twice as likely as a card with weight `50` within the same active table.
 
+The total weight of each banner starts at 1,000,000.
+
 ## Installing the banners with Scooby 1.1.2+
 
 Scooby 1.1.2 added native **Draw Rate presets**, so manually replacing `fgo_summon_weights.json` is no longer necessary for normal use.
