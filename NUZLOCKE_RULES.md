@@ -108,7 +108,7 @@ From the beginning of the run, your roster is guaranteed to contain at least thr
 
 Because of that, even pulling **0 Servants in all 50 normal pulls** cannot soft-lock you out of starting with a three-person team.
 
-### Support Servants are illegal
+### Support Servants are illegal. If you cant field a team of 3 owned servants, that's a loss state. (Still trying to think of work arounds for this, I want servants to be able to solo missions but im not familiar enough with Arcade yet to make a good rule about it.
 
 **Support Servants may not be used.**
 
