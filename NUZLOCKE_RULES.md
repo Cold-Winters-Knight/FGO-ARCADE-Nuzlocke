@@ -115,6 +115,8 @@ Because of that, even pulling **0 Servants in all 50 normal pulls** cannot soft-
 
 The game's support system exists to fill roster gaps, but those Servants are not part of your Nuzlocke roster and do not count as owned Servants for the purposes of the run.
 
+Guest Servants are forced, they have no impact on your nuzlocke, they are just aesthetic.
+
 ### Run failure
 
 If you **end a mission with no surviving Servants that you own**, the run is over.
