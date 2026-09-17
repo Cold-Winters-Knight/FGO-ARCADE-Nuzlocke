@@ -250,9 +250,7 @@ FGO Arcade was originally built around the assumption that summoned cards would 
 
 That creates a disconnect in the current local-server setup.
 
-**Current workaround:** after summoning new cards, relaunch the game with the cards your account now owns so the updated roster is available for the next mission.
-
-This is an implementation limitation of the current local setup, not an additional challenge rule, and can be removed if the launcher/server workflow later gains a cleaner way to refresh owned cards without restarting the game.
+**Current workaround:** after summoning new cards, manually add them to your deck in the launcher then click on the 'LOAD DECK" button, this will update your inventory. This also works for the banners. Just swap what draw rate preset you have selected, hit load and hit save. There is no reason to close your game!
 
 ## The point of the rules
 
