@@ -6,7 +6,7 @@ The goal is not to perfectly recreate retail FGO Arcade or produce a perfectly b
 
 ## Summoning / Pulls
 
-At the **start of each Singularity**, gain **50 pulls**.
+At the **start of each Singularity**, gain **40 pulls**.
 
 Those pulls may be spent on:
 
@@ -77,6 +77,8 @@ NP Tokens normally function only as NP-level increases and do not count as dupli
 This creates an opportunity cost. Do you strengthen the strange Mystery Servant you fell in love with, push your starter toward NP3, repair bad duplicate luck, or save the token for later?
 
 Outside of the Mystery Box exception above, NP Tokens do not count as duplicate summons and cannot trigger Digivolution.
+
+**Summon Rewards are up to you, a free saber is nice and allows for easier entry into the extensive Arotiraverse. Alternatively Nero is funny to try and Digivolve a Draco.**
 
 ## Permadeath
 
