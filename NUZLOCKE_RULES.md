@@ -110,20 +110,18 @@ From the beginning of the run, your roster is guaranteed to contain at least thr
 
 Because of that, even pulling **0 Servants in all 50 normal pulls** cannot soft-lock you out of starting with a three-person team.
 
-### Support Servants are illegal. If you cant field a team of 3 owned servants, that's a loss state.
+### Guest Servants are forced, but If you cant field a team of 3 owned servants, that's a loss state.
 (Still trying to think of work arounds for this, I want servants to be able to solo missions but im not familiar enough with Arcade yet to make a good rule about it.)
 
-**Support Servants may not be used.**
-
-The game's support system exists to fill roster gaps, but those Servants are not part of your Nuzlocke roster and do not count as owned Servants for the purposes of the run.
+The game's guest servant system exists, but those Servants are not part of your Nuzlocke roster and do not count as owned Servants for the purposes of the run.
 
 Guest Servants are forced, they have no impact on your nuzlocke, they are just aesthetic.
 
 ### Run failure
 
-If you **end a mission with no surviving Servants that you own**, the run is over.
+If you **can no longer support 3 owned servants on a mission**, the run is over.
 
-This is the campaign fail state.
+This is the primary campaign fail state.
 
 ## Command Spells
 
@@ -244,17 +242,21 @@ Why do I need to independently pull Summer Scáthach?
 
 **She's right there. She is perfectly capable of putting on a swimsuit.**
 
+Servants only available in a non-traditional base form (i.e. Santa Suzuka Gozen) are treated as being in their base form.
+
++OPTIONAL RULE SUGGESTION: Santa's are their own Digivolution line, and any NP3 Santa can digivolve into another Santa.+
+
 ## Current local-server inventory workaround
 
 FGO Arcade was originally built around the assumption that summoned cards would be **physically printed and scanned back into the cabinet**, rather than maintaining a normal always-available digital card inventory while the game is already running.
 
 That creates a disconnect in the current local-server setup.
 
-**Current workaround:** after summoning new cards, manually add them to your deck in the launcher then click on the 'LOAD DECK" button, this will update your inventory. This also works for the banners. Just swap what draw rate preset you have selected, hit load and hit save. There is no reason to close your game!
+**Current workaround:** after summoning new cards, manually add them to your deck in the launcher then click on the 'LOAD DECK" button in the lower left hand side of the game. this will update your inventory. This also works for the banners. Just swap what draw rate preset you have selected, hit load and hit save. There is no reason to close your game!
 
 ## The point of the rules
 
-The rules are meant to generate stories and present difficult decisions.
+The rules are meant to generate stories and present difficult decisions. Most if not all of the rules will be self-governing for the purpose of a challenge run. Scooby Launcher supports inventory manipulation and this is the primary method of selecting your starter servant, utilizing Command Seals, and the entire digivolution mechanic.
 
 > **Gacha luck determines what tools you receive.**  
 > **Permadeath determines what tools you keep.**  
