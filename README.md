@@ -9,13 +9,15 @@ For the challenge rules, see **[NUZLOCKE_RULES.md](NUZLOCKE_RULES.md)**.
 Copy **all ten raw `.json` preset files** from this folder directly into:
 
 ```text
-Server\artemis\config\summon-presets\
+Server\artemis\config\summon_presets\
 ```
+
+If summon_presets does not exist, go ahead and create it.
 
 After copying, that folder should contain:
 
 ```text
-Server\artemis\config\summon-presets\
+Server\artemis\config\summon_presets\
 ├─ 00_Fuyuki.json
 ├─ 01_Orleans.json
 ├─ 02_Septem.json
