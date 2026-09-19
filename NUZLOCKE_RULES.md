@@ -6,25 +6,53 @@ The goal is not to perfectly recreate retail FGO Arcade or produce a perfectly b
 
 ## Summoning / Pulls
 
-At the **start of each Singularity**, gain **40 pulls**.
+Normal summons are earned through mission progression rather than granted as a fixed allowance.
 
-Those pulls may be spent on:
+### Story Nodes
 
-- the current Singularity banner;
-- any previously unlocked Singularity banner;
-- any combination of those banners.
+A Story Node awards **1 (ONE) Normal Pull** only after the node is fully completed.
 
-**Saving pulls is allowed.** Unspent pulls carry forward.
+For this ruleset, a Story Node is considered complete after all **3 required clears** have been finished. The first and second clears do not independently award pulls.
 
-The custom Singularity banners are curated around:
+Failed attempts and extra repeats of an already completed Story Node do not award pulls.
 
-- story relevance;
-- era relevance;
-- Servant rarity.
+### Material Missions
 
-The intent is for each chapter to have a recognizable locality to the story progression instead of every new Servant permanently diluting one enormous pool.
+After completing a Story Node, you may complete **1 (ONE) Material Mission** before beginning the next Story Node.
 
-The current custom banners use approximately **18% Servants / 82% Craft Essences**, averaging about **9 Servants per 50 pulls**.
+That Material Mission may be used for experience, QP, ascension materials, or another eligible farming mission.
+
+Successfully completing it awards **1 (ONE) Normal Pull**.
+
+The farming opportunity itself cannot be stockpiled. If you move on to the next Story Node without using it, it is lost.
+
+### Pulls cannot be banked
+
+Every Normal Pull must be spent when it is earned.
+
+You may not save, stockpile, or carry Normal Pulls forward. If you begin another eligible node without spending the pull you just earned, that pull is lost.
+
+Each completed Story Node can therefore produce at most:
+
+- **1 pull** for completing the Story Node; and
+- **1 pull** for completing its associated Material Mission.
+
+### Banner choice
+
+When spending a Normal Pull, you may choose:
+
+- the current Singularity banner; or
+- **any previously unlocked Singularity banner**.
+
+Unlocking a Singularity permanently adds that banner to your legal choices. You are never forced to roll the banner associated with the mission you just completed.
+
+The custom banners remain curated around story relevance, era relevance, and Servant rarity, but low-rarity Servants recur broadly so their NP levels can develop naturally during a full campaign.
+
+The current normal banners use **18% Servants / 82% Craft Essences**. Of the total pull rate, 1–3★ Servants occupy **13.5%**, meaning 75% of Servant hits are non-gold.
+
+The 82% Craft Essence side is also rarity-skewed for the scarcity format: **54% 3★ / 20% 4★ / 8% 5★** per normal pull. All normal Story Banners share the same curated 100-CE equipment pool.
+
+**Miyamoto Musashi (`tc_id 1465`) has a special 0.05% Timeline Drift slot on every normal Story Banner.** This rate comes out of the existing 5★ budget and does not increase the overall Servant chance.
 
 Seasonal, event-themed, gag, and other eligible alternate forms are generally kept out of the normal story pools so they can be handled through **Digivolution**.
 
@@ -108,7 +136,7 @@ From the beginning of the run, your roster is guaranteed to contain at least thr
 - **your chosen Starter Servant**
 - **your first Mystery Box Servant**
 
-Because of that, even pulling **0 Servants in all 50 normal pulls** cannot soft-lock you out of starting with a three-person team.
+Because of that, even an extended streak of normal pulls with no Servants cannot soft-lock you out of starting with a three-person team.
 
 ### Guest Servants are forced, but If you cant field a team of 3 owned servants, that's a loss state.
 (Still trying to think of work arounds for this, I want servants to be able to solo missions but im not familiar enough with Arcade yet to make a good rule about it.)
